@@ -1,0 +1,179 @@
+.ql-toolbar{
+  margin-bottom: 0rem;
+  width: 100%; 
+  position: sticky;
+  z-index: 1;
+}
+.quill_box{
+  width: 69rem;
+  
+}
+.ql-editor{
+  min-height: 45rem;
+}
+.quill_box{
+  margin-left: 10%;
+}
+.note_pad_{
+  width: 20.7rem;
+  height: 48.2rem;
+  overflow-x: scroll;
+}
+.pad_quill{
+  margin-left: 23.3%;
+  margin-top: -48rem;
+}
+.notes{
+  /* background-color: aqua; */
+  height: 45rem;
+  width: 20rem;
+}
+.txt_area{
+  margin-left: 22rem;
+  margin-top: -45rem;
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+}
+.btn_icon{
+  margin-left: 1rem;
+  width: 5rem;
+}
+.btn_icon1{
+  width: 5rem;
+  margin-left: 11rem;
+}
+.footer{
+  margin-top: 0.2rem;
+  margin-left: 0.1rem;
+}
+.sigin_btn{
+  margin-left: 5rem;
+}
+.google_signin{
+  margin-left: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.signup_div{
+  margin-left: 17rem;
+  padding-top: 1rem;
+}
+.create_note_btn{
+  padding: 0.8rem;
+}
+.notes_div{
+  width: 40%;
+}
+.note_pad_div{
+  width: 60%;
+  margin-left: 40%;
+  margin-top: -48.5rem;
+  
+}
+.notes_render_div{
+  width: 100%;
+  height: 35rem;
+  overflow-y: scroll;
+}
+.serch_box{
+  padding: 1.4rem;
+}
+.Notes{
+  width: 98%;
+  height: 5rem;
+  margin-left: 0.5%;
+  margin-bottom: 0.2rem;
+  border-radius: 0.5rem;
+  border-width: 0.1rem;
+}
+.note_tittle{
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+.time_update{
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+.icons{
+  margin-left: 75%;
+}
+.icon_{
+  margin-right: 0.5rem;
+}
+
+
+@media (max-width:430px){
+  .ql-toolbar{
+    width: 25rem; 
+    position: sticky;
+    z-index: 1;
+    margin-top: 49rem;
+    margin-left: -5.7rem;
+  }
+  .quill_box.ql-container.ql-snow{
+    margin-left: -5.7rem;
+    width: 25rem;
+    min-height: 41rem;
+  }
+  .ql-editor{
+    min-height: 15rem;
+  }
+  .notes_div{
+    width: 100%;
+  }
+  .notes_render_div{
+    width: 100%;
+    height: 40rem;
+  }
+  .serch_box{
+    padding: 1.4rem;
+  }
+  .icons{
+    margin-left: 17%;
+  }
+  .footer{
+    margin-top: -88rem;
+  }
+}
+@media (max-width:1024px){
+  .ql-toolbar{
+    width: 64rem; 
+    position: sticky;
+    z-index: 1;
+    margin-top: 49rem;
+    margin-left: -14.9rem;
+  }
+  .quill_box.ql-container.ql-snow{
+    margin-left: -14.9rem;
+    width: 64rem;
+    min-height: 79rem;
+  }
+  .icons{
+    margin-left: 68%;
+  }
+  .footer{
+    margin-top: 18rem;
+  }
+  .note_pad_div{
+    margin-top: -85rem;
+  }
+}
+@media (max-width:820px){
+  .ql-toolbar{
+    width: 51rem; 
+    position: sticky;
+    z-index: 1;
+    margin-top: 49rem;
+    margin-left: -11.7rem;
+  }
+  .quill_box.ql-container.ql-snow{
+    margin-left: -11.7rem;
+    width: 51rem;
+    min-height: 41rem;
+  }
+  .icons{
+    margin-left: 60%;
+  }
+}
