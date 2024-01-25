@@ -26,20 +26,18 @@ function onboarding() {
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
-    <div>
-      <h1 className="text-5xl font-bold">Welcome to IdeaPad!</h1>
-      <p className="py-6">Your mobile cloud based note pad, login in form anywhere on any of your device's and save that random idea that came to you,
-      work on your existing notes seemlesly on multiple devices and  have no worries about your progres being saved cause IdeaPad got your back, with a rich a text interface you can draft out 
-      minimalist profesional documents on the go or even take notes in  class,confrences or even on the field that you can revisit later on    </p>
-      {
-        checkUser()
-      }
-    </div>
-  </div>
-</div>
+      <div className="hero min-h-screen" style={{backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)'}}>
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">Welcome to IdeaPad</h1>
+            <p className="mb-5">Your mobile, cloud-based notepad allows you to log in from anywhere on any of your devices and save that random idea that came to you. Work on your existing notes seamlessly across multiple devices, and have no worries about your progress being saved because IdeaPad has got your back. With a rich text interface, you can draft minimalist professional documents on the go or even take notes in class, conferences, or even in the field that you can revisit later on..</p>
+            {
+              checkUser()
+            }
+          </div>
+        </div>
+      </div>
     </>
   )
 }
