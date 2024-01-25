@@ -8,7 +8,7 @@ import Notes from "../../Components/notes/Notes";
 
 function Home() {
   // const [user,setUser] = useState<any>();
-  const breakPoint:number =1024;
+  const breakPoint:number =700;
   const screenWidth:number = window.innerWidth;
 
   // onAuthStateChanged(auth,(currentUser:any)=>{

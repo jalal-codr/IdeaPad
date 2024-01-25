@@ -133,9 +133,7 @@
   .icons{
     margin-left: 17%;
   }
-  .footer{
-    margin-top: -88rem;
-  }
+
 }
 
 @media (min-width: 431px) and (max-width: 821px){
@@ -153,6 +151,12 @@
   }
   .icons{
     margin-left: 60%;
+  }
+  .footer{
+    margin-top: 8rem;
+  }
+  .note_pad_div{
+    margin-top: -65rem;
   }
 }
 
@@ -173,6 +177,12 @@
   .icons {
     margin-left: 60%;
   }
+  .footer{
+    margin-top: 18rem;
+  }
+  .note_pad_div{
+    margin-top: -85rem;
+  }
   /* Additional styles for this range */
 }
 @media (min-width: 1025px){
@@ -192,10 +202,10 @@
     margin-left: 68%;
   }
   .footer{
-    margin-top: 18rem;
+    margin-top: -0.1rem;
   }
   .note_pad_div{
-    margin-top: -85rem;
+    margin-top: -49rem;
   }
   .pad_quill{
     margin-left: 45.3%;
