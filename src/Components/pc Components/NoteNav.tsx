@@ -32,7 +32,7 @@ function NoteNav(props:Props) {
         try{
             const options = {
                 method: "PUT",
-                url:"http://localhost:4000/deleteNote",
+                url:"https://ideapad.onrender.com/deleteNote",
                 headers: {
                     accept: "application/json",
                     authorization: `Bearer ${user.accessToken}`

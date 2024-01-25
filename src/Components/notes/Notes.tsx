@@ -39,7 +39,7 @@ function Notes() {
       try{
         const options = {
           method: "POST",
-          url:"http://localhost:4000/getNotes",
+          url:"https://ideapad.onrender.com/getNotes",
           headers: {
               accept: "application/json",
               authorization: `Bearer ${user.accessToken}`

@@ -47,7 +47,7 @@ function Notes_nav() {
         };
         const options = {
             method: "POST",
-            url:"http://localhost:4000/createNote",
+            url:"https://ideapad.onrender.com/createNote",
             headers: {
                 accept: "application/json",
                 authorization: `Bearer ${user.accessToken}`

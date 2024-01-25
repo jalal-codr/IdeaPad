@@ -41,7 +41,7 @@ function TextArea(props:Props) {
 
 
   useEffect(() => {
-    socketService.connect('http://localhost:4000/'); // Replace with your server URL
+    socketService.connect('https://ideapad.onrender.com/'); // Replace with your server URL
 
     return () => {
       socketService.disconnect();
@@ -122,7 +122,7 @@ function TextArea(props:Props) {
         if(user){
           const options = {
             method: "PUT",
-            url:"http://localhost:4000/getNote",
+            url:"https://ideapad.onrender.com/getNote",
             headers: {
                 accept: "application/json",
                 authorization: `Bearer ${user.accessToken}`
