@@ -12,6 +12,7 @@ function Notes_nav() {
     const [user,setUser] = useState<any>();
     const [check,setCheck] = useState<Boolean>(false);
     const [tittle,setTittle] =  useState<string>("Untittled");
+    //@ts-ignore
     const [cookies, setCookie] = useCookies(['note']);
     
 
