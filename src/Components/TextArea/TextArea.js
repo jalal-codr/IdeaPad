@@ -48,6 +48,7 @@ function TextArea(props) {
     useEffect(() => {
         if (socketService == null || quillInstance.current == null)
             return;
+        //@ts-ignore
         const handler = async (delta, oldDelta, source) => {
             try {
                 if (source !== "user")
