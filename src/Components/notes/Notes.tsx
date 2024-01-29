@@ -62,11 +62,11 @@ function Notes() {
 
   },[user])
 
-  // const searchNotes = (e:any)=>{
-  //   const newNotes:any = notes.filter((element:Props)=>element.tittle.includes(e.target.value))
-  //   setNewNote(newNotes);
-  //   console.log(newNote)
-  // }
+  const searchNotes = (e:any)=>{
+    const newNotes:any = notes.filter((element:Props)=>element.tittle.includes(e.target.value))
+    setNewNote(newNotes);
+    console.log(newNote)
+  }
 
 
   return (
@@ -74,7 +74,7 @@ function Notes() {
       <Notes_nav/>
       <div className="notes_render_div">
         <div className="serch_box">
-          <input  type="text" placeholder="Type here" className="input input-bordered input-xs w-full max-w-xs" />
+          <input onChange={searchNotes}  type="text" placeholder="Type here" className="input input-bordered input-xs w-full max-w-xs" />
         </div>
           {
             notes.map((element:any,index:number)=>(<Note  data={element} key={index} />))
