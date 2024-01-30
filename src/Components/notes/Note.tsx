@@ -10,7 +10,7 @@ interface Props {
     },
   }
 function Note(props:Props) {
-  const [cookies, setCookie] = useCookies(['note']);
+  const [, setCookie] = useCookies(['note']);
 
 
   const click = async()=>{

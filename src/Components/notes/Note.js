@@ -2,7 +2,7 @@ import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-run
 import { useCookies } from 'react-cookie';
 import moment from 'moment';
 function Note(props) {
-    const [cookies, setCookie] = useCookies(['note']);
+    const [, setCookie] = useCookies(['note']);
     const click = async () => {
         setCookie('note', {
             id: props.data._id

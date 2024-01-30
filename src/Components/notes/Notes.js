@@ -40,11 +40,11 @@ function Notes() {
             getNotes();
         }
     }, [user]);
-    // const searchNotes = (e:any)=>{
-    //   const newNotes:any = notes.filter((element:Props)=>element.tittle.includes(e.target.value))
-    //   setNewNote(newNotes);
-    //   console.log(newNote)
-    // }
-    return (_jsxs(_Fragment, { children: [_jsx(Notes_nav, {}), _jsxs("div", { className: "notes_render_div", children: [_jsx("div", { className: "serch_box", children: _jsx("input", { type: "text", placeholder: "Type here", className: "input input-bordered input-xs w-full max-w-xs" }) }), notes.map((element, index) => (_jsx(Note, { data: element }, index)))] }), _jsx("div", { className: "footer", children: _jsx(Footer, {}) })] }));
+    const searchNotes = (e) => {
+        const newNotes = notes.filter((element) => element.tittle.includes(e.target.value));
+        setNewNote(newNotes);
+        console.log(newNote);
+    };
+    return (_jsxs(_Fragment, { children: [_jsx(Notes_nav, {}), _jsxs("div", { className: "notes_render_div", children: [_jsx("div", { className: "serch_box", children: _jsx("input", { onChange: searchNotes, type: "text", placeholder: "Type here", className: "input input-bordered input-xs w-full max-w-xs" }) }), notes.map((element, index) => (_jsx(Note, { data: element }, index)))] }), _jsx("div", { className: "footer", children: _jsx(Footer, {}) })] }));
 }
 export default Notes;
