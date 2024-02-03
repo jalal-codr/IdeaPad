@@ -7,12 +7,12 @@ import axios from "axios";
 import Note from "./Note";
 // import { Search } from "@mui/icons-material";
 
-interface Props {
-      _id:string,
-      tittle:string,
-      updatedAt:any,
+// interface Props {
+//       _id:string,
+//       tittle:string,
+//       updatedAt:any,
 
-}
+// }
 
 function Notes() {
   const [user,setUser] = useState<any>();

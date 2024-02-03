@@ -9,7 +9,7 @@ import Note from "./Note";
 function Notes() {
     const [user, setUser] = useState();
     const [notes, setNotes] = useState([]);
-    const [newNote, setNewNote] = useState([]);
+    // const [newNote,setNewNote] = useState<[]>([]);
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
