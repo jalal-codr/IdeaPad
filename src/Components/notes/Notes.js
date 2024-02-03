@@ -6,6 +6,12 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from "../../FirebaseConfig";
 import axios from "axios";
 import Note from "./Note";
+// import { Search } from "@mui/icons-material";
+// interface Props {
+//       _id:string,
+//       tittle:string,
+//       updatedAt:any,
+// }
 function Notes() {
     const [user, setUser] = useState();
     const [notes, setNotes] = useState([]);
