@@ -17,7 +17,7 @@ interface Props {
 function Notes() {
   const [user,setUser] = useState<any>();
   const [notes,setNotes] = useState<[]>([]);
-  const [newNote,setNewNote] = useState<[]>([]);
+  // const [newNote,setNewNote] = useState<[]>([]);
 
 
   useEffect(() => {
