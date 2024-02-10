@@ -47,6 +47,10 @@ function NoteNav(props:Props) {
         }
     } 
 
+    const person  = async()=>{
+        alert("hello");
+    }
+
   return (
     <>
       <div className="navbar bg-base-100">
@@ -56,7 +60,7 @@ function NoteNav(props:Props) {
             </button>
         <div className='icons'>
             <div className='icon_'>
-                <button className='btn'>
+                <button onClick={person} className='btn'>
                     <PersonAddIcon/>
                 </button>
             </div>
