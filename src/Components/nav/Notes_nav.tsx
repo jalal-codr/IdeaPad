@@ -1,4 +1,5 @@
 import NoteAddIcon from '@mui/icons-material/NoteAdd';
+import TableRowsIcon from '@mui/icons-material/TableRows';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import {onAuthStateChanged } from 'firebase/auth';
@@ -10,10 +11,12 @@ import {useCookies} from 'react-cookie'
 
 function Notes_nav() {
     const [user,setUser] = useState<any>();
-    const [check,setCheck] = useState<Boolean>(false);
+    const [check,setCheck] = useState<String>("false");
     const [tittle,setTittle] =  useState<string>("Untittled");
-    //@ts-ignore
-    const [cookies, setCookie] = useCookies(['note']);
+    const [sheetUrl,setSheet] = useState('')
+    const [sheetTittle,setSheetTittle] = useState<string>()
+    const [, setCookie] = useCookies(['note','sheet']);
+   
     
 
 
@@ -30,11 +33,11 @@ function Notes_nav() {
     
 
     const create =async () => {
-        if(check==false){
-            setCheck(true);
+        if(check=="false"){
+            setCheck("true");
         }
         else{
-            setCheck(false);
+            setCheck("false");
         }
        
     }
@@ -61,11 +64,11 @@ function Notes_nav() {
             id:responce.data._id
           })
         window.location.href='/note';
-        setCheck(false); 
+        setCheck("false"); 
         }
         else{
             alert("You need to signIn to create notes")
-            setCheck(false);
+            setCheck("false");
         }
 
         }
@@ -77,7 +80,7 @@ function Notes_nav() {
         
     } 
     const newNote = ()=>{
-        if(check){
+        if(check=="true"){
             return(<>
             <input onChange={(e)=>setTittle(e.target.value)}  type="text" placeholder="Title :" className="input input-bordered w-full max-w-xs" />
             <div className='create_note_btn'>
@@ -85,8 +88,45 @@ function Notes_nav() {
             </div>
             
             </>)
+
+        }
+        else if (check=='table'){
+            return(<>
+            <input  onChange={(e)=>setSheet(e.target.value)} type="text" placeholder="Google sheet url" className="input input-bordered w-full max-w-xs" />
+            <input onChange={(e)=>setSheetTittle(e.target.value)} type="text" placeholder="Tittle" className="input input-bordered w-full max-w-xs" />
+            <div className='create_note_btn'>
+            <button onClick={sheetPage}  className="btn btn-wide">Import Table</button>
+            </div>
+            </>)
         }
 
+    }
+    const sheetPage = async()=>{
+        if(sheetUrl){
+            await setCookie('sheet',{
+                url:sheetUrl
+            })
+            const newSheet:object  = {
+                email:user.email,
+                tittle:sheetTittle,
+                url:sheetUrl
+
+            }
+            console.log(newSheet)
+            // window.location.href='/table'
+        }else{
+            alert("please input a google sheet url")
+        }
+
+    }
+    const clickTable = ()=>{
+        if(check=='false'){
+            setCheck('table')
+        }
+        else{
+            setCheck('false')
+        }
+        
     }
  
 
@@ -97,7 +137,11 @@ function Notes_nav() {
     <button onClick={create} className='btn' >
     <NoteAddIcon/>
     </button>
-   
+    <div className='btn_tb'>
+    <button  onClick={clickTable} className='btn'>
+        <TableRowsIcon/>
+    </button>
+    </div>   
   </div>
   <div className="navbar-center hidden lg:flex">
   </div>

@@ -102,6 +102,9 @@
 .icon_{
   margin-right: 0.5rem;
 }
+.btn_tb{
+  margin-left: 1rem;
+}
 
 
 @media (max-width:430px){
