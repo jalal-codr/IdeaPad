@@ -112,7 +112,17 @@ function Notes_nav() {
                 url:sheetUrl
 
             }
-            console.log(newSheet)
+            const options = {
+                method: "POST",
+                url:"https://ideapad.onrender.com/create-table",
+                headers: {
+                    accept: "application/json",
+                    authorization: `Bearer ${user.accessToken}`
+                },
+                data:newSheet
+            }
+            const responce =   await axios.request(options);
+            console.log(responce);
             // window.location.href='/table'
         }else{
             alert("please input a google sheet url")
