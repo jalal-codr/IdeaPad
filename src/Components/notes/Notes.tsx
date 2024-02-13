@@ -104,6 +104,9 @@ const getTables = async ()=>{
           }
         </div>
           <div className="table_div">
+            <div className="t_head">
+            <h2 className="t_p">Tables</h2>
+            </div>
             {
               tables.map((element:any,index:number)=>(<Table data={element} key={index}/>))
             }

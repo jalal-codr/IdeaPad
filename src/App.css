@@ -80,7 +80,6 @@
   padding: 1.4rem;
 }
 .note_div{
-background-color: aqua;
 overflow-y: scroll;
 }
 .Notes{
@@ -118,10 +117,17 @@ overflow-y: scroll;
   margin-left: 1rem;
 }
 .table_div{
-  background-color: brown;
   overflow-y: scroll;
   width: 37rem;
   height: 20rem;
+}
+.t_head{
+  background-color: azure;
+  border-radius: 15px;
+  width: 27rem;
+}
+.t_p{
+  margin-left: 2rem;
 }
 
 
