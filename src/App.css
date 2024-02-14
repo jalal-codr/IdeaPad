@@ -81,6 +81,7 @@
 }
 .note_div{
 overflow-y: scroll;
+height: 20rem;
 }
 .Notes{
   width: 98%;
@@ -210,6 +211,12 @@ overflow-y: scroll;
   .note_pad_div{
     margin-top: -85rem;
   }
+  .table_div{
+    margin-top: 16rem;
+    overflow-y: scroll;
+    width: 37rem;
+    height: 45rem;
+  }
   /* Additional styles for this range */
 }
 @media (min-width: 1025px){
@@ -238,5 +245,6 @@ overflow-y: scroll;
     margin-left: 45.3%;
     margin-top: -98rem;
   }
+
   
 }

@@ -78,7 +78,6 @@ const getTables = async ()=>{
     if(user){
       getNotes();
       getTables();
-      console.log(user.accessToken)
     }
    
 
