@@ -5,6 +5,7 @@ import{onAuthStateChanged} from 'firebase/auth'
 import { auth } from "../../FirebaseConfig";
 import axios from "axios";
 import Note from "./Note";
+import Table from "../Table/Table";
 // import { Search } from "@mui/icons-material";
 
 // interface Props {
@@ -17,7 +18,7 @@ import Note from "./Note";
 function Notes() {
   const [user,setUser] = useState<any>();
   const [notes,setNotes] = useState<[]>([]);
-  // const [newNote,setNewNote] = useState<[]>([]);
+  const [tables,setTables] = useState<[]>([]);
 
 
   useEffect(() => {
@@ -32,31 +33,51 @@ function Notes() {
 
 
 
+const getNotes = async () => {
+  try{
+    const options = {
+      method: "POST",
+      url:"https://ideapad.onrender.com/getNotes",
+      headers: {
+          accept: "application/json",
+          authorization: `Bearer ${user.accessToken}`
+      },
+      data:{email:user.email},
+    };
+    const responce = await axios.request(options);
+    setNotes(responce.data);
 
+  }
+  catch(err:any){
+    console.log(err)
+  }
+ 
+}
+
+const getTables = async ()=>{
+  try{
+    const options = {
+      method: "POST",
+      url:"https://ideapad.onrender.com/get-tables",
+      headers: {
+          accept: "application/json",
+          authorization: `Bearer ${user.accessToken}`
+      },
+      data:{email:user.email},
+    };
+    const responce = await axios.request(options);
+    setTables(responce.data);
+  }
+  catch(err:any){
+    console.log(err.message)
+  }
+}
 
   useEffect(()=>{
-    const getNotes = async () => {
-      try{
-        const options = {
-          method: "POST",
-          url:"https://ideapad.onrender.com/getNotes",
-          headers: {
-              accept: "application/json",
-              authorization: `Bearer ${user.accessToken}`
-          },
-          data:{email:user.email},
-        };
-        const responce = await axios.request(options);
-        setNotes(responce.data);
 
-      }
-      catch(err:any){
-        console.log(err)
-      }
-     
-    }
     if(user){
       getNotes();
+      getTables();
     }
    
 
@@ -76,9 +97,20 @@ function Notes() {
         <div className="serch_box">
           <input   type="text" placeholder="Type here" className="input input-bordered input-xs w-full max-w-xs" />
         </div>
+        <div className="note_div">
           {
             notes.map((element:any,index:number)=>(<Note  data={element} key={index} />))
           }
+        </div>
+          <div className="table_div">
+            <div className="t_head">
+            <h2 className="t_p">Tables</h2>
+            </div>
+            {
+              tables.map((element:any,index:number)=>(<Table data={element} key={index}/>))
+            }
+
+          </div>
       </div>
       <div className="footer">
       <Footer/>

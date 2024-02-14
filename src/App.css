@@ -74,15 +74,27 @@
 }
 .notes_render_div{
   width: 100%;
-  height: 35rem;
-  overflow-y: scroll;
+  height: 45rem;
 }
 .serch_box{
   padding: 1.4rem;
 }
+.note_div{
+overflow-y: scroll;
+height: 20rem;
+}
 .Notes{
   width: 98%;
   height: 5rem;
+  margin-left: 0.5%;
+  margin-bottom: 0.2rem;
+  border-radius: 0.5rem;
+  border-width: 0.1rem;
+}
+.Tables{
+  width: 96%;
+  height: 5rem;
+  margin-top: 0.2rem;
   margin-left: 0.5%;
   margin-bottom: 0.2rem;
   border-radius: 0.5rem;
@@ -101,6 +113,22 @@
 }
 .icon_{
   margin-right: 0.5rem;
+}
+.btn_tb{
+  margin-left: 1rem;
+}
+.table_div{
+  overflow-y: scroll;
+  width: 37rem;
+  height: 20rem;
+}
+.t_head{
+  background-color: azure;
+  border-radius: 15px;
+  width: 27rem;
+}
+.t_p{
+  margin-left: 2rem;
 }
 
 
@@ -183,6 +211,12 @@
   .note_pad_div{
     margin-top: -85rem;
   }
+  .table_div{
+    margin-top: 16rem;
+    overflow-y: scroll;
+    width: 37rem;
+    height: 45rem;
+  }
   /* Additional styles for this range */
 }
 @media (min-width: 1025px){
@@ -211,5 +245,6 @@
     margin-left: 45.3%;
     margin-top: -98rem;
   }
+
   
 }
