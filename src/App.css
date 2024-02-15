@@ -212,10 +212,17 @@ height: 20rem;
     margin-top: -85rem;
   }
   .table_div{
-    margin-top: 16rem;
+    margin-top: 1rem;
     overflow-y: scroll;
-    width: 37rem;
-    height: 45rem;
+    width: 26rem;
+    height: 35rem;
+  }
+  .note_div{
+    overflow-y: scroll;
+    height: 40rem;
+  }
+  .t_head{
+    width: 25rem;
   }
   /* Additional styles for this range */
 }
