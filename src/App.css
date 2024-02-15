@@ -186,6 +186,19 @@ height: 20rem;
   .note_pad_div{
     margin-top: -65rem;
   }
+  .table_div{
+    margin-top: 1rem;
+    overflow-y: scroll;
+    width: 19.5rem;
+    height: 35rem;
+  }
+  .note_div{
+    overflow-y: scroll;
+    height: 27rem;
+  }
+  .t_head{
+    width: 18.5rem;
+  }
 }
 
 @media (min-width: 822px) and (max-width: 1024px) {
