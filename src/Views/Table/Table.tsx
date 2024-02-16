@@ -7,9 +7,9 @@ function Table() {
     
     const render =()=>{
       if(note!=""){
-        return(<> <iframe src={src} width="100%" height="780"></iframe></>)
+        return(<> <iframe src={src} className='iframe' ></iframe></>)
       }else if(src!=""){
-        return(<> <iframe src={src} width="100%" height="780"></iframe></>)
+        return(<> <iframe src={src} className='iframe'></iframe></>)
       }
     }
   return (
