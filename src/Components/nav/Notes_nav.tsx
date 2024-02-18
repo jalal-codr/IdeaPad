@@ -121,11 +121,12 @@ function Notes_nav() {
                 },
                 data:newSheet
             }
-            const responce =   await axios.request(options);
-            // console.log(responce);
-            window.location.href='/table'
+            await axios.request(options)
+            .then(()=>{
+                window.location.href='/table';  
+            })
         }else{
-            alert("please input a google sheet url")
+            alert("please input a google sheet url");
         }
 
     }
