@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import PersonAddIcon from '@mui/icons-material/PersonAdd';
+// import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import TableRowsIcon from '@mui/icons-material/TableRows';
 import {onAuthStateChanged } from 'firebase/auth';
 import {auth} from  "../../FirebaseConfig";
 import axios from 'axios';
@@ -61,7 +62,7 @@ function NoteNav(props:Props) {
         <div className='icons'>
             <div className='icon_'>
                 <button onClick={person} className='btn'>
-                    <PersonAddIcon/>
+                    <TableRowsIcon/>
                 </button>
             </div>
             <div className='icon_'>

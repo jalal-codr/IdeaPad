@@ -130,6 +130,9 @@ height: 20rem;
 .t_p{
   margin-left: 2rem;
 }
+.icons_{
+  margin-left: 100%;
+}
 
 
 @media (max-width:430px){
